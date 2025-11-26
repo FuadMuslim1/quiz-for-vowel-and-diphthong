@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American English IPA Quiz (Multiple Choice)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>IPA Symbol Quiz: Vowels & Diphthongs (American English)</h1>
+        
+        <div id="quiz">
+            <div id="question-area">
+                <p class="question-number">Question <span id="current-q">1</span> of <span id="total-q">30</span></p>
+                
+                <div id="word-controls">
+                    <p class="prompt">Identify the main vowel/diphthong symbol for:</p>
+                    <div class="word-display-group">
+                        <h2 id="word-to-guess">WORD</h2>
+                        <button id="audio-btn" title="Listen to the word"><i class="fas fa-volume-up"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="options-container" class="options-grid">
+                </div>
+
+            <div id="feedback-area">
+                <p id="feedback-text"></p>
+                <div id="ipa-reveal-container" class="hidden">
+                    <span id="ipa-transcription" class="ipa-text">/tɹænskɹɪpʃən/</span>
+                    <button id="show-ipa-btn">Show Full IPA</button>
+                </div>
+            </div>
+
+            <div id="controls">
+                <button id="next-btn" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h2>Quiz Complete! 🎉</h2>
+            <p>Your Final Score: <span id="final-score">0</span> / <span id="max-score">30</span></p>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 25px;
+    font-size: 1.6em;
+}
+
+#question-area {
+    margin-bottom: 20px;
+}
+
+.question-number {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.prompt {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.word-display-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#word-to-guess {
+    font-size: 2.8em;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 10px 15px;
+    background-color: #e9f0ff;
+    border-radius: 8px;
+    letter-spacing: 2px;
+}
+
+#audio-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#audio-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* --- Options Grid Styling --- */
+#options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.option-btn {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 2px solid #ced4da;
+    padding: 15px;
+    font-size: 2em; /* Large size for IPA symbols */
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.2s, border-color 0.2s;
+    /* Crucial: Use a standard font for correct IPA display */
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #e9ecef;
+    border-color: #007bff;
+}
+
+.option-btn:disabled {
+    cursor: default;
+}
+
+/* Correct Answer Styling */
+.correct {
+    background-color: #28a745 !important;
+    color: white !important;
+    border-color: #218838 !important;
+}
+
+/* Incorrect Answer Styling */
+.incorrect {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border-color: #c82333 !important;
+}
+
+/* --- Feedback and Reveal Styling --- */
+#feedback-area {
+    min-height: 80px; /* Reserve space to prevent layout jump */
+    margin-bottom: 20px;
+}
+
+#feedback-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#ipa-reveal-container {
+    margin-top: 5px;
+}
+
+.ipa-text {
+    font-size: 1.5em;
+    color: #495057;
+    margin-right: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#show-ipa-btn {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#show-ipa-btn:hover {
+    background-color: #e0a800;
+}
+
+
+#controls {
+    text-align: right;
+}
+
+#next-btn, #restart-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#next-btn:hover:not(:disabled), #restart-btn:hover {
+    background-color: #0056b3;
+}
+
+#next-btn:disabled {
+    background-color: #a0c4ff;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#result-screen {
+    padding: 25px;
+    border: 3px solid #007bff;
+    border-radius: 12px;
+}
+
+#final-score {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.correct-feedback {
+    color: #28a745;
+}
+
+.incorrect-feedback {
+    color: #dc3545;
+}
